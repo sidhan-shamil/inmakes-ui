@@ -1,23 +1,23 @@
-import React,{Component} from 'react'
+import React, { Component } from 'react'
 import { View, StyleSheet, Image, Text, TextInput, TouchableHighlight } from 'react-native'
 
-export default class Register extends Component{
-  render(){
-    return(
-      <View style= {styles.container}>
+export default class Register extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
         <Image style={styles.logo}
-        source={require('../assets/images/inmakes-logo.jpg')}></Image>
-        <Text style={styles.viewText}>Enter your mobile number</Text>
-        <Text style={styles.subText}>We will send you an OTP to verify.</Text>
+          source={require('../assets/images/inmakes-logo.jpg')}></Image>
+        <Text style={styles.viewText} >Enter your mobile number</Text>
+        <Text style={styles.subText} >We will send you an OTP to verify.</Text>
         <View style={styles.viewContainer}>
-            <View style= {styles.inputView}>
-              <TextInput style= {styles.code} placeholder= '+91' placeholderTextColor={'#FFFFFF'}></TextInput>
-              <TextInput style={styles.mobile} placeholder= 'Mobile number' placeholderTextColor={'#446270'}></TextInput>
-            </View>
-            <TouchableHighlight style= {styles.button}>
-              <Text style= {styles.buttonText}
-              onPress= {()=> this.props.navigation.navigate('Otp')} >Continue</Text>
-            </TouchableHighlight>
+          <View style={styles.inputView}>
+            <TextInput style={styles.code} placeholder='+91' placeholderTextColor={'#FFFFFF'}></TextInput>
+            <TextInput style={styles.mobile} placeholder='Mobile number' placeholderTextColor={'#446270'}></TextInput>
+          </View>
+          <TouchableHighlight style={styles.button}>
+            <Text style={styles.buttonText}
+              onPress={() => this.props.navigation.navigate('Otp')} >Continue</Text>
+          </TouchableHighlight>
         </View>
       </View>
     )
@@ -25,7 +25,7 @@ export default class Register extends Component{
 }
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -52,14 +52,14 @@ const styles = StyleSheet.create({
     color: '#9F9F9F',
     marginBottom: 32
   },
-  viewContainer:{
+  viewContainer: {
     width: '100%',
     height: 195,
     backgroundColor: '#002333',
     borderTopStartRadius: 16,
     borderTopRightRadius: 16
   },
-  inputView:{
+  inputView: {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center'
@@ -67,10 +67,7 @@ const styles = StyleSheet.create({
   code: {
     fontSize: 14,
     fontFamily: 'Gilroy-Regular',
-    paddingTop: 18,
     paddingLeft: 17,
-    paddingBottom: 17,
-    paddingRight: 22,
     backgroundColor: '#062E40',
     color: '#00ff44',
     height: 51,

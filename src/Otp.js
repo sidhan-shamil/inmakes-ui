@@ -1,51 +1,52 @@
-import React,{ Component } from "react";
+import React, { Component } from "react";
 import { StyleSheet, View, Text, Image, ImageBackground, TouchableHighlight, TextInput } from "react-native";
 
-export default class Otp extends Component{
-    render(){
-        return(
-            <View style = {styles.container}>
-                    <Image style = {styles.logo}
+export default class Otp extends Component {
+    render() {
+        return (
+            <View style={styles.container}>
+                <Image style={styles.logo}
                     source={require('../assets/images/inmakes-logo-L.jpg')}></Image>
-                    <ImageBackground style = {styles.icon}
+                <ImageBackground style={styles.icon}
                     source={require('../assets/images/group385.png')}>
-                        <Text style = {styles.iconText}>ICON</Text>
-                    </ImageBackground>
-                    <Text style = {styles.text}>Verification code</Text>
-                    <Text style = {styles.subText}>Please type the verification code sent to</Text>
-                    <Text style = {styles.number}>+91 9876543210</Text>
-                    <View style = {styles.viewContainer}>
-                        <View style = {styles.inputView}>
-                        <TextInput style = {styles.input1}></TextInput>
-                        <TextInput style = {styles.input2}></TextInput>
-                        <TextInput style = {styles.input2}></TextInput>
-                        <TextInput style = {styles.input2}></TextInput>
-                        <TextInput style = {styles.input2}></TextInput>
-                        <TextInput style = {styles.input3}></TextInput>
-                        </View>
-                        <TouchableHighlight style = {styles.button}>
-                            <Text style = {styles.buttonText}>Resend OTP</Text>
-                        </TouchableHighlight>
-                        <Text style = {styles.timer}>Resend after 28s</Text>
-                        <View style = {styles.viewContact}>
-                            <Image style = {styles.iconImage}
-                            source = {require('../assets/images/group386.png')}></Image>
-                            <Text style = {styles.contactText}>Contact Us</Text>
-                        </View>
+                    <Text style={styles.iconText} >ICON</Text>
+                </ImageBackground>
+                <Text style={styles.text} >Verification code</Text>
+                <Text style={styles.subText} >Please type the verification code sent to</Text>
+                <Text style={styles.number} >+91 9876543210</Text>
+                <View style={styles.viewContainer}>
+                    <View style={styles.inputView}>
+                        <TextInput style={styles.input1}></TextInput>
+                        <TextInput style={styles.input2}></TextInput>
+                        <TextInput style={styles.input2}></TextInput>
+                        <TextInput style={styles.input2}></TextInput>
+                        <TextInput style={styles.input2}></TextInput>
+                        <TextInput style={styles.input3}></TextInput>
                     </View>
+                    <TouchableHighlight style={styles.button}>
+                        <Text style={styles.buttonText}
+                            onPress={() => this.props.navigation.navigate('StudentDetails')} >Resend OTP</Text>
+                    </TouchableHighlight>
+                    <Text style={styles.timer} >Resend after 28s</Text>
+                    <View style={styles.viewContact}>
+                        <Image style={styles.iconImage}
+                            source={require('../assets/images/group386.png')}></Image>
+                        <Text style={styles.contactText} >Contact Us</Text>
+                    </View>
+                </View>
             </View>
         )
     }
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#fff'
     },
-    logo:{
+    logo: {
         width: 169,
         height: 42,
         marginTop: 48
@@ -95,9 +96,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     inputView: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center'  
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     input1: {
         width: 45,
@@ -164,5 +165,4 @@ const styles = StyleSheet.create({
         lineHeight: 18,
         fontFamily: 'Gilroy-SemiBold'
     }
-
 })
