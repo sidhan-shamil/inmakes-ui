@@ -7,6 +7,7 @@ import Otp from './src/Otp'
 import StudentDetails from './src/StudentDetails'
 import SchoolBoard from './src/SchoolBoard'
 import AppTour from './src/AppTour'
+import Home from './src/Home'
 
 const Stack = createStackNavigator()
 
@@ -30,9 +31,13 @@ function MyStack() {
         component={SchoolBoard}
         options={{ headerShown: false }} />
       <Stack.Screen
-      name = 'AppTour'
-      component={AppTour}
-      options = {{ headerShown: false }} />
+        name='AppTour'
+        component={AppTour}
+        options={{ headerShown: false }} />
+      <Stack.Screen
+        name='Home'
+        component={Home}
+        options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }

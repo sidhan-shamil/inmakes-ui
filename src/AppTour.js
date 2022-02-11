@@ -9,7 +9,8 @@ export default class AppTour extends Component {
                     source={require('../assets/images/image1.png')}></Image>
                 <Text style={styles.text}>App tour title</Text>
                 <Text style={styles.subText}>The app tour description goes here.</Text>
-                <TouchableHighlight style={styles.button}>
+                <TouchableHighlight style={styles.button}
+                    onPress={() => this.props.navigation.navigate('Home')}>
                     <Image style={styles.buttonImg}
                         source={require('../assets/images/group388.png')}></Image>
                 </TouchableHighlight>
