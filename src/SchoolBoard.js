@@ -18,7 +18,8 @@ export default class SchoolBoard extends Component{
                     placeholder= 'Select board' placeholderTextColor={'#446270'}></TextInput>
                     <TextInput style= {styles.input2}
                     placeholder= 'Select class' placeholderTextColor={'#446270'}></TextInput>
-                    <TouchableHighlight style = {styles.button}>
+                    <TouchableHighlight style = {styles.button}
+                    onPress = {()=> this.props.navigation.navigate('AppTour')}>
                         <Text style = {styles.buttonText} >Continue</Text>
                     </TouchableHighlight>
                 </View>
