@@ -6,7 +6,7 @@ export default class StudentDetails extends Component {
         return (
             <View style={styles.container}>
                 <Image style={styles.logo}
-                    source={require('../assets/images/inmakes-logo-L.jpg')}></Image>
+                    source={require('../assets/images/inmakes-logo-L.png')}></Image>
                 <ImageBackground style={styles.icon}
                     source={require('../assets/images/group385.png')}>
                     <Text style={styles.iconText} >ICON</Text>
@@ -17,7 +17,8 @@ export default class StudentDetails extends Component {
                     <TextInput style={styles.input2} placeholder='Email' placeholderTextColor={'#446270'}></TextInput>
                     <TextInput style={styles.input2} placeholder='Select state' placeholderTextColor={'#446270'}></TextInput>
                     <TextInput style={styles.input3} placeholder='Pin code' placeholderTextColor={'#446270'}></TextInput>
-                    <TouchableHighlight style={styles.button}>
+                    <TouchableHighlight style={styles.button}
+                    onPress= {()=> this.props.navigation.navigate('SchoolBoard')}>
                         <Text style={styles.buttonText} >Register</Text>
                     </TouchableHighlight>
                 </View>

@@ -6,7 +6,7 @@ export default class Otp extends Component {
         return (
             <View style={styles.container}>
                 <Image style={styles.logo}
-                    source={require('../assets/images/inmakes-logo-L.jpg')}></Image>
+                    source={require('../assets/images/inmakes-logo-L.png')}></Image>
                 <ImageBackground style={styles.icon}
                     source={require('../assets/images/group385.png')}>
                     <Text style={styles.iconText} >ICON</Text>
