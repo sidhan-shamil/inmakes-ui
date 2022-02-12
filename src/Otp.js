@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text, Image, ImageBackground, TouchableHighlight, TextInput } from "react-native";
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 export default class Otp extends Component {
     render() {
@@ -23,14 +24,13 @@ export default class Otp extends Component {
                         <TextInput style={styles.input2}></TextInput>
                         <TextInput style={styles.input3}></TextInput>
                     </View>
-                    <TouchableHighlight style={styles.button}>
-                        <Text style={styles.buttonText}
-                            onPress={() => this.props.navigation.navigate('StudentDetails')} >Resend OTP</Text>
+                    <TouchableHighlight style={styles.button}
+                        onPress={() => this.props.navigation.navigate('StudentDetails')}>
+                        <Text style={styles.buttonText} >Resend OTP</Text>
                     </TouchableHighlight>
                     <Text style={styles.timer} >Resend after 28s</Text>
                     <View style={styles.viewContact}>
-                        <Image style={styles.iconImage}
-                            source={require('../assets/images/group386.png')}></Image>
+                        <Icon name='call' size={13} color={'#00C458'} />
                         <Text style={styles.contactText} >Contact Us</Text>
                     </View>
                 </View>
@@ -154,15 +154,11 @@ const styles = StyleSheet.create({
         marginBottom: 42,
         marginTop: 38
     },
-    iconImage: {
-        marginRight: 7.32,
-        width: 12.21,
-        height: 16.2
-    },
     contactText: {
         color: '#00C458',
         fontSize: 14,
         lineHeight: 18,
-        fontFamily: 'Gilroy-SemiBold'
+        fontFamily: 'Gilroy-SemiBold',
+        marginLeft: 7.32
     }
 })

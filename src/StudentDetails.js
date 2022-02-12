@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, TouchableHighlight, Image, ImageBackground, TextInput } from "react-native";
+import { StyleSheet, View, Text, TouchableHighlight, Image, ImageBackground, TextInput, Picker } from "react-native";
 
 export default class StudentDetails extends Component {
     render() {
@@ -18,7 +18,7 @@ export default class StudentDetails extends Component {
                     <TextInput style={styles.input2} placeholder='Select state' placeholderTextColor={'#446270'}></TextInput>
                     <TextInput style={styles.input3} placeholder='Pin code' placeholderTextColor={'#446270'}></TextInput>
                     <TouchableHighlight style={styles.button}
-                    onPress= {()=> this.props.navigation.navigate('SchoolBoard')}>
+                        onPress={() => this.props.navigation.navigate('SchoolBoard')}>
                         <Text style={styles.buttonText} >Register</Text>
                     </TouchableHighlight>
                 </View>

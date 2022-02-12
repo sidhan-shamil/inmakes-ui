@@ -6,7 +6,7 @@ export default class AppTour extends Component {
         return (
             <View style={styles.container}>
                 <Image style={styles.image}
-                    source={require('../assets/images/image1.png')}></Image>
+                    source={require('../assets/images/image3.png')}></Image>
                 <Text style={styles.text}>App tour title</Text>
                 <Text style={styles.subText}>The app tour description goes here.</Text>
                 <TouchableHighlight style={styles.button}
