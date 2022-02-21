@@ -18,38 +18,46 @@ export default class DrawerContent extends Component {
                         source={require('../../assets/images/group391.png')}></Image>
                 </View>
 
-                <View style={{ marginLeft: 32, marginRight: 32, marginBottom: 40,marginTop: 42 }}>
+                <View style={{ marginLeft: 32, marginRight: 32, marginBottom: 40, marginTop: 42 }}>
                     <View style={{ flexDirection: 'row', borderBottomColor: '#243C47', borderBottomWidth: 1, marginTop: 16 }}>
                         <View style={styles.square}></View>
-                        <Text style={styles.columnText}>Exam corner</Text>
+                        <Text style={styles.columnText}
+                            onPress={() => this.props.navigation.navigate('ExamCorner')}>Exam corner</Text>
                     </View>
                     <View style={{ flexDirection: 'row', borderBottomColor: '#243C47', borderBottomWidth: 1, marginTop: 16 }}>
                         <View style={styles.square}></View>
-                        <Text style={styles.columnText}>Subrscriptions</Text>
+                        <Text style={styles.columnText}
+                            onPress={() => this.props.navigation.navigate('Subscriptions')}>Subrscriptions</Text>
                     </View>
                     <View style={{ flexDirection: 'row', borderBottomColor: '#243C47', borderBottomWidth: 1, marginTop: 16 }}>
                         <View style={styles.square}></View>
-                        <Text style={styles.columnText}>Analytics</Text>
+                        <Text style={styles.columnText}
+                            onPress={() => this.props.navigation.navigate('Analytics')}>Analytics</Text>
                     </View>
                     <View style={{ flexDirection: 'row', borderBottomColor: '#243C47', borderBottomWidth: 1, marginTop: 16 }}>
                         <View style={styles.square}></View>
-                        <Text style={styles.columnText}>Downloads</Text>
+                        <Text style={styles.columnText}
+                            onPress={() => this.props.navigation.navigate('Downloads')}>Downloads</Text>
                     </View>
                     <View style={{ flexDirection: 'row', borderBottomColor: '#243C47', borderBottomWidth: 1, marginTop: 16 }}>
                         <View style={styles.square}></View>
-                        <Text style={styles.columnText}>Notifications</Text>
+                        <Text style={styles.columnText}
+                            onPress={() => this.props.navigation.navigate('Notifications')}>Notifications</Text>
                     </View>
                     <View style={{ flexDirection: 'row', borderBottomColor: '#243C47', borderBottomWidth: 1, marginTop: 16 }}>
                         <View style={styles.square}></View>
-                        <Text style={styles.columnText}>Referrals</Text>
+                        <Text style={styles.columnText}
+                            onPress={() => this.props.navigation.navigate('Referrals')}>Referrals</Text>
                     </View>
                     <View style={{ flexDirection: 'row', borderBottomColor: '#243C47', borderBottomWidth: 1, marginTop: 16 }}>
                         <View style={styles.square}></View>
-                        <Text style={styles.columnText}>Share app</Text>
+                        <Text style={styles.columnText}
+                            onPress={() => this.props.navigation.navigate('Shareapp')}>Share app</Text>
                     </View>
                     <View style={{ flexDirection: 'row', marginTop: 16 }}>
                         <View style={styles.squareRed}></View>
-                        <Text style={styles.columnTextRed}>Logout</Text>
+                        <Text style={styles.columnTextRed}
+                            onPress={() => this.props.navigation.navigate('Logout')}>Logout</Text>
                     </View>
                 </View>
 

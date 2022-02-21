@@ -5,7 +5,7 @@ export default class Shareapp extends Component{
     render(){
         return(
             <View style= {{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-                <Text style= {{fontSize: 25}}>No Data</Text>
+                <Text style= {{fontSize: 25, color: '#002333'}}>No Data</Text>
             </View>
         )
     }

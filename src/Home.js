@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image, ImageBackground, ScrollView } from "react-native";
-import { TouchableHighlight } from "react-native-gesture-handler";
+import { StyleSheet, View, Text, Image, ImageBackground, ScrollView, TouchableHighlight } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class Home extends Component {

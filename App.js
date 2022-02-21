@@ -12,13 +12,12 @@ import Home from './src/Home'
 import DrawerContent from './src/Drawer/DrawerContent'
 import ExamCorner from './src/Drawer/ExamCorner'
 import Subscriptions from './src/Drawer/Subrscriptions'
-// import Analystics from './src/Drawer/Analytics'
-// import Downloads from './src/Drawer/Downloads'
-// import Notifications from './src/Drawer/Notifications'
-// import Refferals from './src/Drawer/Referrals'
-import Shareapp from './src/Drawer/Shareapp'
-// import Logout from './src/Drawer/Logout'
 import Analytics from './src/Drawer/Analytics'
+import Downloads from './src/Drawer/Downloads'
+import Notifications from './src/Drawer/Notifications'
+import Referrals from './src/Drawer/Referrals'
+import Shareapp from './src/Drawer/Shareapp'
+import Logout from './src/Drawer/Logout'
 
 const Stack = createStackNavigator()
 const Drawer = createDrawerNavigator()
@@ -61,10 +60,31 @@ function MyStack() {
 function MyDrawer() {
   return (
     <Drawer.Navigator
-      drawerContent={() => <DrawerContent />}>
+      drawerContent={(props) => <DrawerContent{...props} />}>
       <Drawer.Screen
         name='ExamCorner'
         component={ExamCorner} />
+      <Drawer.Screen
+        name='Subscriptions'
+        component={Subscriptions} />
+      <Drawer.Screen
+        name='Analytics'
+        component={Analytics} />
+      <Drawer.Screen
+        name='Downloads'
+        component={Downloads} />
+      <Drawer.Screen
+        name='Notifications'
+        component={Notifications} />
+      <Drawer.Screen
+        name='Referrals'
+        component={Referrals} />
+      <Drawer.Screen
+        name='Shareapp'
+        component={Shareapp} />
+      <Drawer.Screen
+        name='Logout'
+        component={Logout} />
     </Drawer.Navigator>
   )
 }
