@@ -8,6 +8,9 @@ export default class Home extends Component {
             <View style={{ flex: 1, backgroundColor: '#fff' }}>
                 {/* header */}
                 <View style={{ flexDirection: 'row' }}>
+                    <View style={styles.menu}>
+                        <Icon name='grid-view' size={18} color='#00C458' />
+                    </View>
                     <Image style={styles.logo}
                         source={require('../assets/images/inmakes-logo-L.png')}></Image>
                     <View style={styles.classes}>
@@ -17,9 +20,11 @@ export default class Home extends Component {
                 </View>
                 {/* header-end */}
                 {/* section-1 */}
+                <ScrollView horizontal= {false}>
                 <Text style={styles.contentText}>Goodmorning</Text>
                 <Text style={styles.textMain}>Aaron Taylor</Text>
                 <ImageBackground style={{ marginTop: 37, marginLeft: 32, marginRight: 32 }}
+                    imageStyle={{ borderRadius: 2 }}
                     source={require('../assets/images/group389.png')}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                         <View style={{ marginLeft: 32 }}>
@@ -60,6 +65,30 @@ export default class Home extends Component {
                 {/* section-2-end */}
                 {/* section-3-start */}
                 <Text style={styles.recentCourses}>Recent courses</Text>
+                <View style={{ flexDirection: 'row', marginLeft: 32 }}>
+                    <ScrollView horizontal={true}>
+                        <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
+                            source={require('../assets/images/video.png')}>
+                            <Image style={styles.playButton}
+                                source={require('../assets/images/group392.png')}></Image>
+                            <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
+                        <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
+                            source={require('../assets/images/video.png')}>
+                            <Image style={styles.playButton}
+                                source={require('../assets/images/group392.png')}></Image>
+                            <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
+                        <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
+                            source={require('../assets/images/video.png')}>
+                            <Image style={styles.playButton}
+                                source={require('../assets/images/group392.png')}></Image>
+                            <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
+                        <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
+                            source={require('../assets/images/video.png')}>
+                            <Image style={styles.playButton}
+                                source={require('../assets/images/group392.png')}></Image>
+                            <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
+                    </ScrollView>
+                </View>
                 {/* section-3-end */}
                 {/* section-4-start */}
                 <View style={{ marginTop: 24, marginLeft: 32, flexDirection: 'row' }}>
@@ -99,15 +128,27 @@ export default class Home extends Component {
                     </ScrollView>
                 </View>
                 {/* section-4-end */}
+                </ScrollView>
             </View>
         )
     }
 }
 
 const styles = StyleSheet.create({
+    menu: {
+        width: 32,
+        height: 32,
+        borderColor: '#D5D5D5',
+        borderWidth: 1,
+        borderRadius: 4,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 40,
+        marginLeft: 32,
+        marginRight: 8
+    },
     logo: {
         marginTop: 44,
-        marginLeft: 72,
         width: 116,
         height: 26
     },
@@ -189,10 +230,25 @@ const styles = StyleSheet.create({
         marginBottom: 8,
         marginLeft: 32
     },
-    backgroundVideo: {
+    videoCard: {
         width: 213,
         height: 121,
-        marginLeft: 32
+        marginRight: 8,
+        flexDirection: 'row'
+    },
+    playButton: {
+        marginTop: 79,
+        marginLeft: 10,
+        width: 24,
+        height: 24,
+        marginRight: 8
+    },
+    videocardText: {
+        fontFamily: 'Gilroy-SemiBold',
+        fontSize: 12,
+        lineHeight: 15,
+        color: '#FFFFFF',
+        marginTop: 84
     },
     liveClass: {
         width: 238,
