@@ -9,7 +9,7 @@ export default class Home extends Component {
                 {/* header */}
                 <View style={{ flexDirection: 'row' }}>
                     <View style={styles.menu}>
-                        <Icon name='grid-view' size={18} color='#00C458' />
+                        <Icon name='grid-view' size={18} color='#00C458' onPress={() => this.props.navigation.navigate('Drawer')} />
                     </View>
                     <Image style={styles.logo}
                         source={require('../assets/images/inmakes-logo-L.png')}></Image>
@@ -20,114 +20,119 @@ export default class Home extends Component {
                 </View>
                 {/* header-end */}
                 {/* section-1 */}
-                <ScrollView horizontal= {false}>
-                <Text style={styles.contentText}>Goodmorning</Text>
-                <Text style={styles.textMain}>Aaron Taylor</Text>
-                <ImageBackground style={{ marginTop: 37, marginLeft: 32, marginRight: 32 }}
-                    imageStyle={{ borderRadius: 2 }}
-                    source={require('../assets/images/group389.png')}>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-                        <View style={{ marginLeft: 32 }}>
-                            <Text style={styles.imgText}>Class</Text>
-                            <Text style={styles.mainText}>Plus two science</Text>
+                <ScrollView horizontal={false}>
+                    <Text style={styles.contentText}>Goodmorning</Text>
+                    <Text style={styles.textMain}>Aaron Taylor</Text>
+                    <ImageBackground style={{ marginTop: 37, marginLeft: 32, marginRight: 32 }}
+                        imageStyle={{ borderRadius: 2 }}
+                        source={require('../assets/images/group389.png')}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                            <View style={{ marginLeft: 32 }}>
+                                <Text style={styles.imgText}>Class</Text>
+                                <Text style={styles.mainText}>Plus two science</Text>
+                            </View>
+                            <View style={{ marginRight: 32 }}>
+                                <Icon style={{ paddingLeft: 134 }} name='keyboard-arrow-down' size={12} color={'#FFFFFF'} />
+                            </View>
                         </View>
-                        <View style={{ marginRight: 32 }}>
-                            <Icon style={{ paddingLeft: 134 }} name='keyboard-arrow-down' size={12} color={'#FFFFFF'} />
-                        </View>
+                    </ImageBackground>
+                    {/* section-1-end */}
+                    {/* section-2 */}
+                    <View style={{ marginTop: 24, flexDirection: 'row', marginLeft: 32 }}>
+                        <ScrollView horizontal={true}>
+                            <View style={styles.subject}>
+                                <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
+                                <Text style={styles.subjectText}
+                                    onPress={() => this.props.navigation.navigate('Biology')}>Biology</Text>
+                            </View>
+                            <View style={styles.subject}>
+                                <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
+                                <Text style={styles.subjectText}
+                                    onPress={() => this.props.navigation.navigate('Biology')}>Physics</Text>
+                            </View>
+                            <View style={styles.subject}>
+                                <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
+                                <Text style={styles.subjectText}
+                                    onPress={() => this.props.navigation.navigate('Biology')}>Chemistry</Text>
+                            </View>
+                            <View style={styles.subject}>
+                                <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
+                                <Text style={styles.subjectText}
+                                    onPress={() => this.props.navigation.navigate('Biology')}>Maths</Text>
+                            </View>
+                            <View style={styles.subject}>
+                                <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
+                                <Text style={styles.subjectText}
+                                    onPress={() => this.props.navigation.navigate('Biology')}>English</Text>
+                            </View>
+                        </ScrollView>
                     </View>
-                </ImageBackground>
-                {/* section-1-end */}
-                {/* section-2 */}
-                <View style={{ marginTop: 24, flexDirection: 'row', marginLeft: 32 }}>
-                    <ScrollView horizontal={true}>
-                        <View style={styles.subject}>
-                            <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
-                            <Text style={styles.subjectText}>Biology</Text>
-                        </View>
-                        <View style={styles.subject}>
-                            <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
-                            <Text style={styles.subjectText}>Physics</Text>
-                        </View>
-                        <View style={styles.subject}>
-                            <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
-                            <Text style={styles.subjectText}>Chemistry</Text>
-                        </View>
-                        <View style={styles.subject}>
-                            <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
-                            <Text style={styles.subjectText}>Maths</Text>
-                        </View>
-                        <View style={styles.subject}>
-                            <View style={{ width: 23, height: 23, borderRadius: 11.5, marginRight: 8, backgroundColor: '#00C458' }}></View>
-                            <Text style={styles.subjectText}>English</Text>
-                        </View>
-                    </ScrollView>
-                </View>
-                {/* section-2-end */}
-                {/* section-3-start */}
-                <Text style={styles.recentCourses}>Recent courses</Text>
-                <View style={{ flexDirection: 'row', marginLeft: 32 }}>
-                    <ScrollView horizontal={true}>
-                        <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
-                            source={require('../assets/images/video.png')}>
-                            <Image style={styles.playButton}
-                                source={require('../assets/images/group392.png')}></Image>
-                            <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
-                        <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
-                            source={require('../assets/images/video.png')}>
-                            <Image style={styles.playButton}
-                                source={require('../assets/images/group392.png')}></Image>
-                            <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
-                        <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
-                            source={require('../assets/images/video.png')}>
-                            <Image style={styles.playButton}
-                                source={require('../assets/images/group392.png')}></Image>
-                            <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
-                        <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
-                            source={require('../assets/images/video.png')}>
-                            <Image style={styles.playButton}
-                                source={require('../assets/images/group392.png')}></Image>
-                            <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
-                    </ScrollView>
-                </View>
-                {/* section-3-end */}
-                {/* section-4-start */}
-                <View style={{ marginTop: 24, marginLeft: 32, flexDirection: 'row' }}>
-                    <ScrollView horizontal={true}>
-                        <View style={styles.liveClass}>
-                            <View style={{ width: 79, height: 79, borderRadius: 39.5, backgroundColor: '#002E43', marginTop: 38, marginBottom: 16 }}></View>
-                            <Text style={styles.liveClasstext}>Target live classes</Text>
-                            <Text style={styles.liveClassSubText}>Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention</Text>
-                            <TouchableHighlight style={styles.button}>
-                                <Text style={styles.buttonText}>Book a free Class</Text>
-                            </TouchableHighlight>
-                        </View>
-                        <View style={styles.liveClass}>
-                            <View style={{ width: 79, height: 79, borderRadius: 39.5, backgroundColor: '#002E43', marginTop: 38, marginBottom: 16 }}></View>
-                            <Text style={styles.liveClasstext}>Target live classes</Text>
-                            <Text style={styles.liveClassSubText}>Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention</Text>
-                            <TouchableHighlight style={styles.button}>
-                                <Text style={styles.buttonText}>Book a free Class</Text>
-                            </TouchableHighlight>
-                        </View>
-                        <View style={styles.liveClass}>
-                            <View style={{ width: 79, height: 79, borderRadius: 39.5, backgroundColor: '#002E43', marginTop: 38, marginBottom: 16 }}></View>
-                            <Text style={styles.liveClasstext}>Target live classes</Text>
-                            <Text style={styles.liveClassSubText}>Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention</Text>
-                            <TouchableHighlight style={styles.button}>
-                                <Text style={styles.buttonText}>Book a free Class</Text>
-                            </TouchableHighlight>
-                        </View>
-                        <View style={styles.liveClass}>
-                            <View style={{ width: 79, height: 79, borderRadius: 39.5, backgroundColor: '#002E43', marginTop: 38, marginBottom: 16 }}></View>
-                            <Text style={styles.liveClasstext}>Target live classes</Text>
-                            <Text style={styles.liveClassSubText}>Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention</Text>
-                            <TouchableHighlight style={styles.button}>
-                                <Text style={styles.buttonText}>Book a free Class</Text>
-                            </TouchableHighlight>
-                        </View>
-                    </ScrollView>
-                </View>
-                {/* section-4-end */}
+                    {/* section-2-end */}
+                    {/* section-3-start */}
+                    <Text style={styles.recentCourses}>Recent courses</Text>
+                    <View style={{ flexDirection: 'row', marginLeft: 32 }}>
+                        <ScrollView horizontal={true}>
+                            <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
+                                source={require('../assets/images/video.png')}>
+                                <Image style={styles.playButton}
+                                    source={require('../assets/images/group392.png')}></Image>
+                                <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
+                            <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
+                                source={require('../assets/images/video.png')}>
+                                <Image style={styles.playButton}
+                                    source={require('../assets/images/group392.png')}></Image>
+                                <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
+                            <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
+                                source={require('../assets/images/video.png')}>
+                                <Image style={styles.playButton}
+                                    source={require('../assets/images/group392.png')}></Image>
+                                <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
+                            <ImageBackground style={styles.videoCard} imageStyle={{ borderRadius: 2 }}
+                                source={require('../assets/images/video.png')}>
+                                <Image style={styles.playButton}
+                                    source={require('../assets/images/group392.png')}></Image>
+                                <Text style={styles.videocardText}>Course Title</Text></ImageBackground>
+                        </ScrollView>
+                    </View>
+                    {/* section-3-end */}
+                    {/* section-4-start */}
+                    <View style={{ marginTop: 24, marginLeft: 32, flexDirection: 'row' }}>
+                        <ScrollView horizontal={true}>
+                            <View style={styles.liveClass}>
+                                <View style={{ width: 79, height: 79, borderRadius: 39.5, backgroundColor: '#002E43', marginTop: 38, marginBottom: 16 }}></View>
+                                <Text style={styles.liveClasstext}>Target live classes</Text>
+                                <Text style={styles.liveClassSubText}>Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention</Text>
+                                <TouchableHighlight style={styles.button}>
+                                    <Text style={styles.buttonText}>Book a free Class</Text>
+                                </TouchableHighlight>
+                            </View>
+                            <View style={styles.liveClass}>
+                                <View style={{ width: 79, height: 79, borderRadius: 39.5, backgroundColor: '#002E43', marginTop: 38, marginBottom: 16 }}></View>
+                                <Text style={styles.liveClasstext}>Target live classes</Text>
+                                <Text style={styles.liveClassSubText}>Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention</Text>
+                                <TouchableHighlight style={styles.button}>
+                                    <Text style={styles.buttonText}>Book a free Class</Text>
+                                </TouchableHighlight>
+                            </View>
+                            <View style={styles.liveClass}>
+                                <View style={{ width: 79, height: 79, borderRadius: 39.5, backgroundColor: '#002E43', marginTop: 38, marginBottom: 16 }}></View>
+                                <Text style={styles.liveClasstext}>Target live classes</Text>
+                                <Text style={styles.liveClassSubText}>Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention</Text>
+                                <TouchableHighlight style={styles.button}>
+                                    <Text style={styles.buttonText}>Book a free Class</Text>
+                                </TouchableHighlight>
+                            </View>
+                            <View style={styles.liveClass}>
+                                <View style={{ width: 79, height: 79, borderRadius: 39.5, backgroundColor: '#002E43', marginTop: 38, marginBottom: 16 }}></View>
+                                <Text style={styles.liveClasstext}>Target live classes</Text>
+                                <Text style={styles.liveClassSubText}>Live classes by best teachers from LearningHub to clear your doubts and to provide individual attention</Text>
+                                <TouchableHighlight style={styles.button}>
+                                    <Text style={styles.buttonText}>Book a free Class</Text>
+                                </TouchableHighlight>
+                            </View>
+                        </ScrollView>
+                    </View>
+                    {/* section-4-end */}
                 </ScrollView>
             </View>
         )

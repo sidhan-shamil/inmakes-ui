@@ -18,6 +18,7 @@ import Notifications from './src/Drawer/Notifications'
 import Referrals from './src/Drawer/Referrals'
 import Shareapp from './src/Drawer/Shareapp'
 import Logout from './src/Drawer/Logout'
+import Biology from './src/Biology'
 
 const Stack = createStackNavigator()
 const Drawer = createDrawerNavigator()
@@ -52,6 +53,10 @@ function MyStack() {
       <Stack.Screen
         name='Drawer'
         component={MyDrawer}
+        options={{ headerShown: false }} />
+      <Stack.Screen
+        name='Biology'
+        component={Biology}
         options={{ headerShown: false }} />
     </Stack.Navigator>
   )
