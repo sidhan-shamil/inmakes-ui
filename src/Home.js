@@ -9,7 +9,7 @@ export default class Home extends Component {
                 {/* header */}
                 <View style={{ flexDirection: 'row' }}>
                     <View style={styles.menu}>
-                        <Icon name='grid-view' size={18} color='#00C458' onPress={() => this.props.navigation.navigate('Drawer')} />
+                        <Icon name='grid-view' size={18} color='#00C458' onPress={() => this.props.navigation.openDrawer()} />
                     </View>
                     <Image style={styles.logo}
                         source={require('../assets/images/inmakes-logo-L.png')}></Image>

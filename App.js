@@ -19,6 +19,7 @@ import Referrals from './src/Drawer/Referrals'
 import Shareapp from './src/Drawer/Shareapp'
 import Logout from './src/Drawer/Logout'
 import Biology from './src/Biology'
+import BottomTab from './src/BottomTab'
 
 const Stack = createStackNavigator()
 const Drawer = createDrawerNavigator()
@@ -57,6 +58,10 @@ function MyStack() {
       <Stack.Screen
         name='Biology'
         component={Biology}
+        options={{ headerShown: false }} />
+      <Stack.Screen
+        name='BottomTab'
+        component={BottomTab}
         options={{ headerShown: false }} />
     </Stack.Navigator>
   )
