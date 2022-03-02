@@ -1,7 +1,7 @@
 import React,{Component} from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { View, Text } from "react-native";
 
-export default class ProfileScreen extends Component{
+export default class Exams extends Component{
     render(){
         return(
             <View>

@@ -14,8 +14,8 @@ export default class Register extends Component {
             <TextInput style={styles.code} placeholder='+91' placeholderTextColor={'#FFFFFF'}></TextInput>
             <TextInput style={styles.mobile} placeholder='Mobile number' placeholderTextColor={'#446270'}></TextInput>
           </View>
-          <TouchableHighlight style={styles.button}>
-            {/* onPress={() => this.props.navigation.navigate('Tab')}> */}
+          <TouchableHighlight style={styles.button}
+          onPress={()=> this.props.navigation.navigate('Otp')}>
             <Text style={styles.buttonText} >Continue</Text>
           </TouchableHighlight>
         </View>

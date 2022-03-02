@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text, Image, ImageBackground, ScrollView, TouchableHighlight } from "react-native";
+import { StyleSheet, View, Text, Image, ImageBackground, ScrollView, TouchableHighlight, Button } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class Home extends Component {
@@ -95,6 +95,10 @@ export default class Home extends Component {
                         </ScrollView>
                     </View>
                     {/* section-3-end */}
+                    <Button
+                        title="Tab"
+                        onPress={() => this.props.navigation.navigate('Tab')}
+                    />
                     {/* section-4-start */}
                     <View style={{ marginTop: 24, marginLeft: 32, flexDirection: 'row' }}>
                         <ScrollView horizontal={true}>

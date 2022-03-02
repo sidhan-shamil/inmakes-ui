@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 // import { createDrawerNavigator } from '@react-navigation/drawer'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import Register from './src/Register'
 import Otp from './src/Otp'
@@ -20,8 +21,11 @@ import Home from './src/Home'
 // import Shareapp from './src/Drawer/Shareapp'
 // import Logout from './src/Drawer/Logout'
 import Biology from './src/Biology'
-import HomeScreen from './src/Tab/HomeScreen'
-import ProfileScreen from './src/Tab/ProfileScreen'
+// import Home from './src/Tab/Home'
+import Profile from './src/Tab/Profile'
+import Recent from './src/Tab/Recent'
+import Exams from './src/Tab/Exams'
+import Contact from './src/Tab/Contact'
 
 const Stack = createStackNavigator()
 // const Drawer = createDrawerNavigator()
@@ -56,7 +60,8 @@ function MyStack() {
         options={{ headerShown: false }} />
       <Stack.Screen
         name='Tab'
-        component={MyTabs} />
+        component={MyTabs}
+        options={{ headerShown: false }} />
       {/* <Stack.Screen
         name='Drawer'
         component={MyDrawer}
@@ -105,13 +110,67 @@ function MyTabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name='HomeScreen'
-        component={HomeScreen}
-        options={{ headerShown: false }} />
+        name='Home'
+        component={Home}
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: '#00C458',
+          tabBarInactiveTintColor: '#C2C2C2',
+          tabBarIcon: ({ focused }) =>
+            focused ? <Icon name='home' size={24} color={'#00C458'} /> : <Icon name='home' size={24} color={'#C2C2C2'} />
+        }} />
       <Tab.Screen
-        name='ProfileScreen'
-        component={ProfileScreen}
-        options={{ headerShown: false }} />
+        name='Recent'
+        component={Recent}
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: '#00C458',
+          tabBarInactiveTintColor: '#C2C2C2',
+          tabBarIndicatorStyle: {
+            backgroundColor: '#00C458'
+          },
+          tabBarIcon: ({ focused }) =>
+            focused ? <Icon name='play-arrow' size={24} color={'#00C458'} /> : <Icon name='play-arrow' size={24} color={'#C2C2C2'} />
+        }} />
+      <Tab.Screen
+        name='Exams'
+        component={Exams}
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: '#00C458',
+          tabBarInactiveTintColor: '#C2C2C2',
+          tabBarIndicatorStyle: {
+            backgroundColor: '#00C458'
+          },
+          tabBarIcon: ({ focused }) =>
+            focused ? <Icon name='article' size={24} color={'#00C458'} /> : <Icon name='article' size={24} color={'#C2C2C2'} />
+        }} />
+      <Tab.Screen
+        name='Profile'
+        component={Profile}
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: '#00C458',
+          tabBarInactiveTintColor: '#C2C2C2',
+          tabBarIndicatorStyle: {
+            backgroundColor: '#00C458'
+          },
+          tabBarIcon: ({ focused }) =>
+            focused ? <Icon name='account-circle' size={24} color={'#00C458'} /> : <Icon name='account-circle' size={24} color={'#C2C2C2'} />
+        }} />
+      <Tab.Screen
+        name='Contact'
+        component={Contact}
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: '#00C458',
+          tabBarInactiveTintColor: '#C2C2C2',
+          tabBarIndicatorStyle: {
+            backgroundColor: '#00C458'
+          },
+          tabBarIcon: ({ focused }) =>
+            focused ? <Icon name='email' size={24} color={'#00C458'} /> : <Icon name='email' size={24} color={'#C2C2C2'} />
+        }} />
     </Tab.Navigator>
   )
 }
