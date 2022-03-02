@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import { createDrawerNavigator } from '@react-navigation/drawer'
+// import { createDrawerNavigator } from '@react-navigation/drawer'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Register from './src/Register'
 import Otp from './src/Otp'
@@ -9,20 +10,22 @@ import StudentDetails from './src/StudentDetails'
 import SchoolBoard from './src/SchoolBoard'
 import AppTour from './src/AppTour'
 import Home from './src/Home'
-import DrawerContent from './src/Drawer/DrawerContent'
-import ExamCorner from './src/Drawer/ExamCorner'
-import Subscriptions from './src/Drawer/Subrscriptions'
-import Analytics from './src/Drawer/Analytics'
-import Downloads from './src/Drawer/Downloads'
-import Notifications from './src/Drawer/Notifications'
-import Referrals from './src/Drawer/Referrals'
-import Shareapp from './src/Drawer/Shareapp'
-import Logout from './src/Drawer/Logout'
+// import DrawerContent from './src/Drawer/DrawerContent'
+// import ExamCorner from './src/Drawer/ExamCorner'
+// import Subscriptions from './src/Drawer/Subrscriptions'
+// import Analytics from './src/Drawer/Analytics'
+// import Downloads from './src/Drawer/Downloads'
+// import Notifications from './src/Drawer/Notifications'
+// import Referrals from './src/Drawer/Referrals'
+// import Shareapp from './src/Drawer/Shareapp'
+// import Logout from './src/Drawer/Logout'
 import Biology from './src/Biology'
-import BottomTab from './src/BottomTab'
+import HomeScreen from './src/Tab/HomeScreen'
+import ProfileScreen from './src/Tab/ProfileScreen'
 
 const Stack = createStackNavigator()
-const Drawer = createDrawerNavigator()
+// const Drawer = createDrawerNavigator()
+const Tab = createBottomTabNavigator();
 
 function MyStack() {
   return (
@@ -52,50 +55,64 @@ function MyStack() {
         component={Home}
         options={{ headerShown: false }} />
       <Stack.Screen
+        name='Tab'
+        component={MyTabs} />
+      {/* <Stack.Screen
         name='Drawer'
         component={MyDrawer}
-        options={{ headerShown: false }} />
+        options={{ headerShown: false }} /> */}
       <Stack.Screen
         name='Biology'
         component={Biology}
-        options={{ headerShown: false }} />
-      <Stack.Screen
-        name='BottomTab'
-        component={BottomTab}
         options={{ headerShown: false }} />
     </Stack.Navigator>
   )
 }
 
-function MyDrawer() {
+// function MyDrawer() {
+//   return (
+//     <Drawer.Navigator
+//       drawerContent={(props) => <DrawerContent{...props} />}>
+//       <Drawer.Screen
+//         name='ExamCorner'
+//         component={ExamCorner} />
+//       <Drawer.Screen
+//         name='Subscriptions'
+//         component={Subscriptions} />
+//       <Drawer.Screen
+//         name='Analytics'
+//         component={Analytics} />
+//       <Drawer.Screen
+//         name='Downloads'
+//         component={Downloads} />
+//       <Drawer.Screen
+//         name='Notifications'
+//         component={Notifications} />
+//       <Drawer.Screen
+//         name='Referrals'
+//         component={Referrals} />
+//       <Drawer.Screen
+//         name='Shareapp'
+//         component={Shareapp} />
+//       <Drawer.Screen
+//         name='Logout'
+//         component={Logout} />
+//     </Drawer.Navigator>
+//   )
+// }
+
+function MyTabs() {
   return (
-    <Drawer.Navigator
-      drawerContent={(props) => <DrawerContent{...props} />}>
-      <Drawer.Screen
-        name='ExamCorner'
-        component={ExamCorner} />
-      <Drawer.Screen
-        name='Subscriptions'
-        component={Subscriptions} />
-      <Drawer.Screen
-        name='Analytics'
-        component={Analytics} />
-      <Drawer.Screen
-        name='Downloads'
-        component={Downloads} />
-      <Drawer.Screen
-        name='Notifications'
-        component={Notifications} />
-      <Drawer.Screen
-        name='Referrals'
-        component={Referrals} />
-      <Drawer.Screen
-        name='Shareapp'
-        component={Shareapp} />
-      <Drawer.Screen
-        name='Logout'
-        component={Logout} />
-    </Drawer.Navigator>
+    <Tab.Navigator>
+      <Tab.Screen
+        name='HomeScreen'
+        component={HomeScreen}
+        options={{ headerShown: false }} />
+      <Tab.Screen
+        name='ProfileScreen'
+        component={ProfileScreen}
+        options={{ headerShown: false }} />
+    </Tab.Navigator>
   )
 }
 
